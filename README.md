@@ -13,7 +13,3 @@ Yum Server
 
 ### CentOS-Base-Client.repo
 Client
-
-home2
-
-work2
