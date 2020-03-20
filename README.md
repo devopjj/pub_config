@@ -15,3 +15,5 @@ Yum Server
 Client
 
 home2
+
+work2
