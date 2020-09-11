@@ -1,0 +1,27 @@
+# CentOS-Base7-Client.repo
+[base7]
+name=CentOS-$releasever - Base7- local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/base7/
+gpgcheck=1
+gpgkey=http://<YUM_SERVER_IP>/centos/RPM-GPG-KEY-CentOS-7
+
+#released updates
+[updates7]
+name=CentOS-$releasever - Updates- local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/updates7/
+enabled=0
+gpgcheck=1
+gpgkey=http:/<YUM_SERVER_IP>/centos/RPM-GPG-KEY-CentOS-7
+
+#additional packages that may be useful
+[extras7]
+name=CentOS-$releasever - Extras- local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/extras7/
+gpgcheck=1
+gpgkey=http://<YUM_SERVER_IP>/centos/RPM-GPG-KEY-CentOS-7
+
+[epel7]
+name=CentOS-$releasever - Extras- local mirror
+baseurl=http://<YUM_SERVER_IP>/epel/$releasever/$basearch/
+enabled=0
+gpgcheck=0

@@ -1,38 +1,37 @@
 # CentOS-Base-Server.repo
-[base]
-name=CentOS-$releasever - Base
-baseurl=http://mirror01.idc.hinet.net/CentOS/$releasever/os/$basearch/
+#CentOS8
+[base8]
+name=CentOS-8 - Base
+baseurl=http://mirror01.idc.hinet.net/$contentdir/8/BaseOS/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+#CentOS7
+[base7]
+name=CentOS-7 - Base
+baseurl=http://mirror01.idc.hinet.net/centos/7/os/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-
 #released updates
-[updates]
+
+[updates7]
 name=CentOS-$releasever - Updates
-baseurl=http://mirror01.idc.hinet.net/CentOS/$releasever/updates/$basearch/
+baseurl=http://mirror01.idc.hinet.net/centos/7/updates/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 #additional packages that may be useful
-[extras]
+[extras7]
 name=CentOS-$releasever - Extras
-baseurl=http://mirror01.idc.hinet.net/CentOS/$releasever/extras/$basearch/
+baseurl=http://mirror01.idc.hinet.net/centos/7/extras/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 #additional packages that extend functionality of existing packages
-[centosplus]
+[centosplus7]
 name=CentOS-$releasever - Plus
-baseurl=http://mirror01.idc.hinet.net/CentOS/$releasever/centosplus/$basearch/
+baseurl=http://mirror01.idc.hinet.net/centos/7/centosplus/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-
-[epel]
-name=Extra Packages for Enterprise Linux 7 - $basearch
-baseurl=http://mirror01.idc.hinet.net/centos/$releasever/os/$basearch/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch&infra=$infra&cont
-ent=$contentdir
-failovermethod=priority
-enabled=1
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
