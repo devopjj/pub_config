@@ -1,19 +1,16 @@
 # 下載 rpms
 echo 开始同步centos7
 # [base]
-dnf reposync -n --repoid=base7  --delete --releasever 7  -p /opt/mirrors/centos/7
 # CentOS7 command
-# reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -rbase --download_path=/opt/mirrors/centos/7/base7/
+reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -rbase --download_path=/opt/mirrors/centos/7/base7/
 
 # [updates]
-dnf reposync -n --repoid=updates7  --delete --releasever 7  -p /opt/mirrors/centos/7
 # CentOS7 command
-# reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -r updates --download_path=/opt/mirrors/centos/7/updates7/
+reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -r updates --download_path=/opt/mirrors/centos/7/updates7/
 
 # [extras]
-dnf reposync -n --repoid=extras7  --delete --releasever 7  -p /opt/mirrors/centos/7
 # CentOS7 command
-# reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -r extras --download_path=/opt/mirrors/centos/7/extras7/
+reposync -c /etc/yum/yum.conf -n -d --download-metadata --norepopath -r extras --download_path=/opt/mirrors/centos/7/extras7/
 
 # [epel]
 # CentOS7 command
