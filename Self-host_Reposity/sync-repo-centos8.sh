@@ -8,7 +8,7 @@ echo 開始同步 CentOS 8 rpm
 
 VER='8'
 ARCH='x86_64'
-REPOS=(base AppStream extras8)
+REPOS=(BaseOS AppStream extras8)
 for REPO in ${REPOS[@]}
 do
     reposync --repo=${REPO} --download-metadata --newest-only -p /opt/mirrors/centos/8/  
