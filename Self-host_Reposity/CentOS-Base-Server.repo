@@ -1,21 +1,36 @@
 # CentOS-Base-Server.repo
+
 #CentOS8
-[base8]
+[BaseOS]
 name=CentOS-8 - Base
 baseurl=http://mirror01.idc.hinet.net/$contentdir/8/BaseOS/$basearch/os/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
+[AppStream]
+name=CentOS-$releasever - AppStream
+baseurl=http://mirror01.idc.hinet.net/$contentdir/8/AppStream/$basearch/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+[extras8]
+name=CentOS-$releasever - Extras
+baseurl=http://mirror01.idc.hinet.net/centos/8/extras/x86_64/os/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
 #CentOS7
-[base7]
+[base]
 name=CentOS-7 - Base
 baseurl=http://mirror01.idc.hinet.net/centos/7/os/$basearch/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 #released updates
 
-[updates7]
+[updates]
 name=CentOS-$releasever - Updates
 baseurl=http://mirror01.idc.hinet.net/centos/7/updates/$basearch/
 gpgcheck=1
@@ -24,12 +39,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 #additional packages that may be useful
 [extras7]
 name=CentOS-$releasever - Extras
-baseurl=http://mirror01.idc.hinet.net/centos/7/extras/$basearch/
+baseurl=http://mirror01.idc.hinet.net/centos/7/extras/x86_64/
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 #additional packages that extend functionality of existing packages
-[centosplus7]
+[centosplus]
 name=CentOS-$releasever - Plus
 baseurl=http://mirror01.idc.hinet.net/centos/7/centosplus/$basearch/
 gpgcheck=1

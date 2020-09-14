@@ -1,0 +1,6 @@
+# CentOS-myrpm.repo
+[myrpm]
+name=My Packages-$releaserver - Test
+baseurl=http://<YUM_SERVER_IP>/centos/myrpm/
+gpgcheck=0
+enabled = 1

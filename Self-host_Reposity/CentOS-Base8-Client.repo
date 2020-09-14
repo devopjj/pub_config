@@ -1,0 +1,20 @@
+# CentOS-Base8-Client.repo
+[BaseOS]
+name=CentOS-$releasever - Base  - local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/base8/
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+[AppStream]
+name=CentOS-$releasever - AppStream - local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/AppStream/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
+[extras]
+name=CentOS-$releasever - Extras - local mirror
+baseurl=http://<YUM_SERVER_IP>/centos/$releasever/extras8/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
