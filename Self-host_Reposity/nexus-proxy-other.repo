@@ -1,0 +1,15 @@
+[MongoDB]
+name=MongoDB Repository
+baseurl=http://<YUM_SERVER_IP>/repository/mongodb4.4-proxy/yum/redhat/$releasever/mongodb-org/4.4/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.4.asc
+
+[kubernetes]
+name=Kubernetes
+baseurl=http://<YUM_SERVER_IP>/repository/kubernetes/kubernetes-el7-$basearch
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+exclude=kubelet kubeadm kubectl
