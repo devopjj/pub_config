@@ -7,7 +7,7 @@ default_ca = CA_default
 
 [ CA_default ]
 # 路径及档案配置
-dir               = /etc/pki/CA
+dir               = /etc/pki/intermediate
 certs             = $dir/certs
 crl_dir           = $dir/crl
 new_certs_dir     = $dir/newcerts
@@ -15,13 +15,13 @@ database          = $dir/index.txt
 serial            = $dir/serial
 RANDFILE          = $dir/private/.rand
 
-# 档密钥及证书 The root key and root certificate.
-private_key       = $dir/private/ca.key.pem
-certificate       = $dir/certs/ca.cert.pem
+# # 中介密钥及证书
+private_key       = $dir/private/intermediate.key.pem
+certificate       = $dir/certs/intermediate.cert.pem
 
 # 吊销证书 For certificate revocation lists.
 crlnumber         = $dir/crlnumber
-crl               = $dir/crl/ca.crl.pem
+crl               = $dir/crl/intermediate.crl.pem
 crl_extensions    = crl_ext
 default_crl_days  = 30
 
@@ -32,7 +32,7 @@ name_opt          = ca_default
 cert_opt          = ca_default
 default_days      = 375
 preserve          = no
-policy            = policy_strict
+policy            = policy_loose
 
 [ policy_strict ]
 # 符合以下规定的才能由 root CA 签发证书
@@ -80,7 +80,7 @@ countryName_default             = CN
 stateOrProvinceName_default     = ShangHai
 localityName_default            = JJ Home
 0.organizationName_default      = CDI Ltd
-organizationalUnitName_default  = CDI.IT,CA Authority
+organizationalUnitName_default  = IT Security
 emailAddress_default            = admin@jj.me
 
 [ v3_ca ]
