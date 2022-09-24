@@ -1,5 +1,5 @@
 # OpenSSL root CA configuration file.
-# 存放为 /etc/pki/CA/openssl.cnf.
+# 将此档复制存放到 /etc/ssl/openssl_intermediate.cnf.
 
 [ ca ]
 # 必要配置

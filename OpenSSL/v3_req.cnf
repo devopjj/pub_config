@@ -1,0 +1,12 @@
+# 将此档复制存放到 /etc/ssl/v3_req.cnf.
+
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = jj.me
+DNS.2 = cdi.com
+DNS.3 = *.jj.me
+DNS.4 = *.cdi.com
