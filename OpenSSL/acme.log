@@ -1,0 +1,235 @@
+[日  9月 25 19:55:04 CST 2022] Running cmd: issue
+[日  9月 25 19:55:04 CST 2022] _main_domain='*.ldtw11.com'
+[日  9月 25 19:55:04 CST 2022] _alt_domains='no'
+[日  9月 25 19:55:05 CST 2022] Using config home:/Users/ericlin/.acme.sh
+[日  9月 25 19:55:05 CST 2022] default_acme_server
+[日  9月 25 19:55:05 CST 2022] ACME_DIRECTORY='https://acme.zerossl.com/v2/DV90'
+[日  9月 25 19:55:05 CST 2022] DOMAIN_PATH='/Users/ericlin/.acme.sh/*.ldtw11.com'
+[日  9月 25 19:55:05 CST 2022] Using ACME_DIRECTORY: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:05 CST 2022] _init api for server: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:05 CST 2022] GET
+[日  9月 25 19:55:05 CST 2022] url='https://acme.zerossl.com/v2/DV90'
+[日  9月 25 19:55:05 CST 2022] timeout=
+[日  9月 25 19:55:05 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:08 CST 2022] ret='0'
+[日  9月 25 19:55:08 CST 2022] ACME_KEY_CHANGE='https://acme.zerossl.com/v2/DV90/keyChange'
+[日  9月 25 19:55:08 CST 2022] ACME_NEW_AUTHZ
+[日  9月 25 19:55:08 CST 2022] ACME_NEW_ORDER='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:08 CST 2022] ACME_NEW_ACCOUNT='https://acme.zerossl.com/v2/DV90/newAccount'
+[日  9月 25 19:55:08 CST 2022] ACME_REVOKE_CERT='https://acme.zerossl.com/v2/DV90/revokeCert'
+[日  9月 25 19:55:08 CST 2022] ACME_AGREEMENT='https://secure.trust-provider.com/repository/docs/Legacy/20201020_Certificate_Subscriber_Agreement_v_2_4_click.pdf'
+[日  9月 25 19:55:08 CST 2022] ACME_NEW_NONCE='https://acme.zerossl.com/v2/DV90/newNonce'
+[日  9月 25 19:55:08 CST 2022] Using CA: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:08 CST 2022] _on_before_issue
+[日  9月 25 19:55:08 CST 2022] _chk_main_domain='*.ldtw11.com'
+[日  9月 25 19:55:08 CST 2022] _chk_alt_domains
+[日  9月 25 19:55:08 CST 2022] Le_LocalAddress
+[日  9月 25 19:55:08 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:08 CST 2022] Check for domain='*.ldtw11.com'
+[日  9月 25 19:55:08 CST 2022] _currentRoot='dns_cf'
+[日  9月 25 19:55:08 CST 2022] d
+[日  9月 25 19:55:08 CST 2022] _saved_account_key_hash is not changed, skip register account.
+[日  9月 25 19:55:08 CST 2022] Read key length:2048
+[日  9月 25 19:55:08 CST 2022] Creating domain key
+[日  9月 25 19:55:08 CST 2022] Using config home:/Users/ericlin/.acme.sh
+[日  9月 25 19:55:08 CST 2022] ACME_DIRECTORY='https://acme.zerossl.com/v2/DV90'
+[日  9月 25 19:55:08 CST 2022] Use length 2048
+[日  9月 25 19:55:08 CST 2022] Using RSA: 2048
+[日  9月 25 19:55:08 CST 2022] The domain key is here: [1;32m/Users/ericlin/.acme.sh/*.ldtw11.com/*.ldtw11.com.key[0m
+[日  9月 25 19:55:08 CST 2022] _createcsr
+[日  9月 25 19:55:08 CST 2022] Single domain='*.ldtw11.com'
+[日  9月 25 19:55:08 CST 2022] Getting domain auth token for each domain
+[日  9月 25 19:55:08 CST 2022] d
+[日  9月 25 19:55:08 CST 2022] url='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:08 CST 2022] payload='{"identifiers": [{"type":"dns","value":"*.ldtw11.com"}]}'
+[日  9月 25 19:55:08 CST 2022] RSA key
+[日  9月 25 19:55:08 CST 2022] HEAD
+[日  9月 25 19:55:08 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/newNonce'
+[日  9月 25 19:55:08 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g  -I  '
+[日  9月 25 19:55:12 CST 2022] _ret='0'
+[日  9月 25 19:55:12 CST 2022] POST
+[日  9月 25 19:55:12 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:12 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:16 CST 2022] _ret='0'
+[日  9月 25 19:55:16 CST 2022] code='201'
+[日  9月 25 19:55:16 CST 2022] Le_LinkOrder='https://acme.zerossl.com/v2/DV90/order/67moirK7F9kPAQbDzKkyew'
+[日  9月 25 19:55:16 CST 2022] Le_OrderFinalize='https://acme.zerossl.com/v2/DV90/order/67moirK7F9kPAQbDzKkyew/finalize'
+[日  9月 25 19:55:16 CST 2022] url='https://acme.zerossl.com/v2/DV90/authz/xWwcft1jx1-9_KXcBPBUhg'
+[日  9月 25 19:55:16 CST 2022] payload
+[日  9月 25 19:55:16 CST 2022] POST
+[日  9月 25 19:55:16 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/authz/xWwcft1jx1-9_KXcBPBUhg'
+[日  9月 25 19:55:16 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:21 CST 2022] _ret='0'
+[日  9月 25 19:55:21 CST 2022] code='200'
+[日  9月 25 19:55:21 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] Getting webroot for domain='*.ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] _w='dns_cf'
+[日  9月 25 19:55:21 CST 2022] _currentRoot='dns_cf'
+[日  9月 25 19:55:21 CST 2022] entry='"type":"dns-01","url":"https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w","status":"pending","token":"a5xsuTjXEBQgqY8uZ6-lbNkWhWygnpkqi7xSe31vn-g"'
+[日  9月 25 19:55:21 CST 2022] token='a5xsuTjXEBQgqY8uZ6-lbNkWhWygnpkqi7xSe31vn-g'
+[日  9月 25 19:55:21 CST 2022] uri='https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w'
+[日  9月 25 19:55:21 CST 2022] keyauthorization='a5xsuTjXEBQgqY8uZ6-lbNkWhWygnpkqi7xSe31vn-g.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o'
+[日  9月 25 19:55:21 CST 2022] dvlist='*.ldtw11.com#a5xsuTjXEBQgqY8uZ6-lbNkWhWygnpkqi7xSe31vn-g.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o#https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w#dns-01#dns_cf'
+[日  9月 25 19:55:21 CST 2022] d
+[日  9月 25 19:55:21 CST 2022] vlist='*.ldtw11.com#a5xsuTjXEBQgqY8uZ6-lbNkWhWygnpkqi7xSe31vn-g.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o#https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w#dns-01#dns_cf,'
+[日  9月 25 19:55:21 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] _d_alias
+[日  9月 25 19:55:21 CST 2022] txtdomain='_acme-challenge.ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] txt='gHOvSBH1iPbaC22-1SWZcYeB1Q75F9tYfdW_TP5Qvkk'
+[日  9月 25 19:55:21 CST 2022] d_api='/data/home/gitrepo/work/aidevops/acme.sh/dnsapi/dns_cf.sh'
+[日  9月 25 19:55:21 CST 2022] Found domain api file: /data/home/gitrepo/work/aidevops/acme.sh/dnsapi/dns_cf.sh
+[日  9月 25 19:55:21 CST 2022] Adding txt value: gHOvSBH1iPbaC22-1SWZcYeB1Q75F9tYfdW_TP5Qvkk for domain:  _acme-challenge.ldtw11.com
+[日  9月 25 19:55:21 CST 2022] First detect the root zone
+[日  9月 25 19:55:21 CST 2022] h='_acme-challenge.ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] zones?name=_acme-challenge.ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:21 CST 2022] GET
+[日  9月 25 19:55:21 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=_acme-challenge.ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:21 CST 2022] timeout=
+[日  9月 25 19:55:21 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:21 CST 2022] ret='0'
+[日  9月 25 19:55:21 CST 2022] h='ldtw11.com'
+[日  9月 25 19:55:21 CST 2022] zones?name=ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:21 CST 2022] GET
+[日  9月 25 19:55:21 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:21 CST 2022] timeout=
+[日  9月 25 19:55:21 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:22 CST 2022] ret='0'
+[日  9月 25 19:55:22 CST 2022] h='com'
+[日  9月 25 19:55:22 CST 2022] zones?name=com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:22 CST 2022] GET
+[日  9月 25 19:55:22 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:22 CST 2022] timeout=
+[日  9月 25 19:55:22 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:22 CST 2022] ret='0'
+[日  9月 25 19:55:22 CST 2022] h
+[日  9月 25 19:55:22 CST 2022] invalid domain
+[日  9月 25 19:55:22 CST 2022] Error add txt for domain:_acme-challenge.ldtw11.com
+[日  9月 25 19:55:22 CST 2022] _on_issue_err
+[日  9月 25 19:55:22 CST 2022] Please check log file for more details: acme.log
+[日  9月 25 19:55:22 CST 2022] url='https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w'
+[日  9月 25 19:55:22 CST 2022] payload='{}'
+[日  9月 25 19:55:22 CST 2022] POST
+[日  9月 25 19:55:22 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/chall/9BQXfYEOcACfwv-vZR5U-w'
+[日  9月 25 19:55:22 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:26 CST 2022] _ret='0'
+[日  9月 25 19:55:26 CST 2022] code='200'
+[日  9月 25 19:55:26 CST 2022] pid
+[日  9月 25 19:55:26 CST 2022] No need to restore nginx, skip.
+[日  9月 25 19:55:26 CST 2022] _clearupdns
+[日  9月 25 19:55:26 CST 2022] dns_entries
+[日  9月 25 19:55:26 CST 2022] skip dns.
+[日  9月 25 19:55:33 CST 2022] Running cmd: issue
+[日  9月 25 19:55:33 CST 2022] _main_domain='*.ldtw11.com'
+[日  9月 25 19:55:33 CST 2022] _alt_domains='no'
+[日  9月 25 19:55:33 CST 2022] Using config home:/Users/ericlin/.acme.sh
+[日  9月 25 19:55:33 CST 2022] default_acme_server
+[日  9月 25 19:55:33 CST 2022] ACME_DIRECTORY='https://acme.zerossl.com/v2/DV90'
+[日  9月 25 19:55:33 CST 2022] DOMAIN_PATH='/Users/ericlin/.acme.sh/*.ldtw11.com'
+[日  9月 25 19:55:33 CST 2022] Le_NextRenewTime
+[日  9月 25 19:55:33 CST 2022] Using ACME_DIRECTORY: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:33 CST 2022] _init api for server: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:33 CST 2022] GET
+[日  9月 25 19:55:33 CST 2022] url='https://acme.zerossl.com/v2/DV90'
+[日  9月 25 19:55:33 CST 2022] timeout=
+[日  9月 25 19:55:33 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:37 CST 2022] ret='0'
+[日  9月 25 19:55:37 CST 2022] ACME_KEY_CHANGE='https://acme.zerossl.com/v2/DV90/keyChange'
+[日  9月 25 19:55:37 CST 2022] ACME_NEW_AUTHZ
+[日  9月 25 19:55:37 CST 2022] ACME_NEW_ORDER='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:37 CST 2022] ACME_NEW_ACCOUNT='https://acme.zerossl.com/v2/DV90/newAccount'
+[日  9月 25 19:55:37 CST 2022] ACME_REVOKE_CERT='https://acme.zerossl.com/v2/DV90/revokeCert'
+[日  9月 25 19:55:37 CST 2022] ACME_AGREEMENT='https://secure.trust-provider.com/repository/docs/Legacy/20201020_Certificate_Subscriber_Agreement_v_2_4_click.pdf'
+[日  9月 25 19:55:37 CST 2022] ACME_NEW_NONCE='https://acme.zerossl.com/v2/DV90/newNonce'
+[日  9月 25 19:55:37 CST 2022] Using CA: https://acme.zerossl.com/v2/DV90
+[日  9月 25 19:55:37 CST 2022] _on_before_issue
+[日  9月 25 19:55:37 CST 2022] _chk_main_domain='*.ldtw11.com'
+[日  9月 25 19:55:37 CST 2022] _chk_alt_domains
+[日  9月 25 19:55:37 CST 2022] Le_LocalAddress
+[日  9月 25 19:55:37 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:37 CST 2022] Check for domain='*.ldtw11.com'
+[日  9月 25 19:55:37 CST 2022] _currentRoot='dns_cf'
+[日  9月 25 19:55:37 CST 2022] d
+[日  9月 25 19:55:37 CST 2022] _saved_account_key_hash is not changed, skip register account.
+[日  9月 25 19:55:37 CST 2022] Read key length:2048
+[日  9月 25 19:55:37 CST 2022] _createcsr
+[日  9月 25 19:55:37 CST 2022] Single domain='*.ldtw11.com'
+[日  9月 25 19:55:37 CST 2022] Getting domain auth token for each domain
+[日  9月 25 19:55:37 CST 2022] d
+[日  9月 25 19:55:37 CST 2022] url='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:37 CST 2022] payload='{"identifiers": [{"type":"dns","value":"*.ldtw11.com"}]}'
+[日  9月 25 19:55:37 CST 2022] RSA key
+[日  9月 25 19:55:37 CST 2022] HEAD
+[日  9月 25 19:55:37 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/newNonce'
+[日  9月 25 19:55:37 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g  -I  '
+[日  9月 25 19:55:41 CST 2022] _ret='0'
+[日  9月 25 19:55:41 CST 2022] POST
+[日  9月 25 19:55:41 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/newOrder'
+[日  9月 25 19:55:41 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:44 CST 2022] _ret='0'
+[日  9月 25 19:55:44 CST 2022] code='201'
+[日  9月 25 19:55:44 CST 2022] Le_LinkOrder='https://acme.zerossl.com/v2/DV90/order/meuwHlncodXYjlu1hqkZyQ'
+[日  9月 25 19:55:44 CST 2022] Le_OrderFinalize='https://acme.zerossl.com/v2/DV90/order/meuwHlncodXYjlu1hqkZyQ/finalize'
+[日  9月 25 19:55:44 CST 2022] url='https://acme.zerossl.com/v2/DV90/authz/_mw9RYS-IR9rHN2sWpcTxg'
+[日  9月 25 19:55:44 CST 2022] payload
+[日  9月 25 19:55:44 CST 2022] POST
+[日  9月 25 19:55:44 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/authz/_mw9RYS-IR9rHN2sWpcTxg'
+[日  9月 25 19:55:44 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:48 CST 2022] _ret='0'
+[日  9月 25 19:55:48 CST 2022] code='200'
+[日  9月 25 19:55:48 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] Getting webroot for domain='*.ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] _w='dns_cf'
+[日  9月 25 19:55:48 CST 2022] _currentRoot='dns_cf'
+[日  9月 25 19:55:48 CST 2022] entry='"type":"dns-01","url":"https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA","status":"pending","token":"QBIzpux5MzyDCaU2OdCjHG6jzxV6HgXm5QUWMaDPaCU"'
+[日  9月 25 19:55:48 CST 2022] token='QBIzpux5MzyDCaU2OdCjHG6jzxV6HgXm5QUWMaDPaCU'
+[日  9月 25 19:55:48 CST 2022] uri='https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA'
+[日  9月 25 19:55:48 CST 2022] keyauthorization='QBIzpux5MzyDCaU2OdCjHG6jzxV6HgXm5QUWMaDPaCU.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o'
+[日  9月 25 19:55:48 CST 2022] dvlist='*.ldtw11.com#QBIzpux5MzyDCaU2OdCjHG6jzxV6HgXm5QUWMaDPaCU.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o#https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA#dns-01#dns_cf'
+[日  9月 25 19:55:48 CST 2022] d
+[日  9月 25 19:55:48 CST 2022] vlist='*.ldtw11.com#QBIzpux5MzyDCaU2OdCjHG6jzxV6HgXm5QUWMaDPaCU.gJqbL4foaCUbSlJ5dPdYvGQZyyVuYzeu3GRWSQ4pU_o#https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA#dns-01#dns_cf,'
+[日  9月 25 19:55:48 CST 2022] d='*.ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] _d_alias
+[日  9月 25 19:55:48 CST 2022] txtdomain='_acme-challenge.ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] txt='FEIK3I3aEJsRBmtfaYxqaL-wgDoU5eq2J4Rq0RJargU'
+[日  9月 25 19:55:48 CST 2022] d_api='/data/home/gitrepo/work/aidevops/acme.sh/dnsapi/dns_cf.sh'
+[日  9月 25 19:55:48 CST 2022] Found domain api file: /data/home/gitrepo/work/aidevops/acme.sh/dnsapi/dns_cf.sh
+[日  9月 25 19:55:48 CST 2022] Adding txt value: FEIK3I3aEJsRBmtfaYxqaL-wgDoU5eq2J4Rq0RJargU for domain:  _acme-challenge.ldtw11.com
+[日  9月 25 19:55:48 CST 2022] First detect the root zone
+[日  9月 25 19:55:48 CST 2022] h='_acme-challenge.ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] zones?name=_acme-challenge.ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:48 CST 2022] GET
+[日  9月 25 19:55:48 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=_acme-challenge.ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:48 CST 2022] timeout=
+[日  9月 25 19:55:48 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:48 CST 2022] ret='0'
+[日  9月 25 19:55:48 CST 2022] h='ldtw11.com'
+[日  9月 25 19:55:48 CST 2022] zones?name=ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:48 CST 2022] GET
+[日  9月 25 19:55:48 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=ldtw11.com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:49 CST 2022] timeout=
+[日  9月 25 19:55:49 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:49 CST 2022] ret='0'
+[日  9月 25 19:55:49 CST 2022] h='com'
+[日  9月 25 19:55:49 CST 2022] zones?name=com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b
+[日  9月 25 19:55:49 CST 2022] GET
+[日  9月 25 19:55:49 CST 2022] url='https://api.cloudflare.com/client/v4/zones?name=com&account.id=a39d5f0d9185d87e5cd06735d19b4f4b'
+[日  9月 25 19:55:49 CST 2022] timeout=
+[日  9月 25 19:55:49 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:49 CST 2022] ret='0'
+[日  9月 25 19:55:49 CST 2022] h
+[日  9月 25 19:55:49 CST 2022] invalid domain
+[日  9月 25 19:55:49 CST 2022] Error add txt for domain:_acme-challenge.ldtw11.com
+[日  9月 25 19:55:49 CST 2022] _on_issue_err
+[日  9月 25 19:55:49 CST 2022] Please check log file for more details: acme.log
+[日  9月 25 19:55:49 CST 2022] url='https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA'
+[日  9月 25 19:55:49 CST 2022] payload='{}'
+[日  9月 25 19:55:49 CST 2022] POST
+[日  9月 25 19:55:49 CST 2022] _post_url='https://acme.zerossl.com/v2/DV90/chall/ekWYNSbIidOevTeYUNYKQA'
+[日  9月 25 19:55:49 CST 2022] _CURL='curl --silent --dump-header /Users/ericlin/.acme.sh/http.header  -L  -g '
+[日  9月 25 19:55:50 CST 2022] _ret='0'
+[日  9月 25 19:55:51 CST 2022] code='200'
+[日  9月 25 19:55:51 CST 2022] pid
+[日  9月 25 19:55:51 CST 2022] No need to restore nginx, skip.
+[日  9月 25 19:55:51 CST 2022] _clearupdns
+[日  9月 25 19:55:51 CST 2022] dns_entries
+[日  9月 25 19:55:51 CST 2022] skip dns.

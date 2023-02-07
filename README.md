@@ -1,9 +1,17 @@
-# scripts
+ReadME
+
+### 目录存放说明
+
 Scripts to maintain OS or PC
 
-### Self-host_Reposity
+#### Self-host_Reposity
 
 - CentOS-Base-Server.repo : Hinet鏡像來源
 -  CentOS-Base.repo：客戶端
 
-三  8月 17 23:37:07 CST 2022
+### Tools 工具应用
+
+- uploadGoogleDrive.py 上传Google Drive
+
+
+
