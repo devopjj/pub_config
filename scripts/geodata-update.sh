@@ -1,0 +1,1 @@
+/mnt/srvdata/xray01/mosdns/scripts/geodata-update.sh

@@ -12,6 +12,7 @@ Scripts to maintain OS or PC
 ### Tools 工具应用
 
 - uploadGoogleDrive.py 上传Google Drive
+- dump_for_mysql.py 将 sqlite3 迁移至 MySQL
 
 
 
