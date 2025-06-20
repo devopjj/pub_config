@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # === CONFIG ===
-URL="https://mycdn.example.com/bashrc/bashrc_bundle-v1.tgz"
+URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-v1.tgz"
 DEST="$HOME"
 STAMP="$DEST/.bashrc.d/.installed_version"
 VERSION="v1"
