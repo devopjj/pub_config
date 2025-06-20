@@ -21,6 +21,6 @@ curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
 
 tar xzf /tmp/bashrc_bundle.tgz -C "$DEST"
 echo "$VERSION" > "$STAMP"
-
+sed -i "s/env\.j\///g" $DEST/.bashrc
 # Reload shell
 echo "✅ Installed. Run 'exec bash' or open a new shell to apply changes."
