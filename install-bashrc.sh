@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # === CONFIG ===
-URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-v1.tgz"
+VERSION="v1"
+URL="https://mycdn.example.com/bashrc/bashrc_bundle-${VERSION}.tgz"
 DEST="$HOME"
 STAMP="$DEST/.bashrc.d/.installed_version"
-VERSION="v1"
 
 echo "👉 Installing bashrc bundle version: $VERSION"
 
@@ -21,6 +21,6 @@ curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
 
 tar xzf /tmp/bashrc_bundle.tgz -C "$DEST"
 echo "$VERSION" > "$STAMP"
-sed -i "s/env\.j\///g" $DEST/.bashrc
+
 # Reload shell
 echo "✅ Installed. Run 'exec bash' or open a new shell to apply changes."
