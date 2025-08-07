@@ -2,17 +2,17 @@
 
 # === CONFIG ===
 VERSION="v1"
-URL="https://mycdn.example.com/bashrc/bashrc_bundle-${VERSION}.tgz"
+URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-${VERSION}.tgz"
 DEST="$HOME"
 STAMP="$DEST/.bashrc.d/.installed_version"
 
 echo "👉 Installing bashrc bundle version: $VERSION"
 
 # Check existing version
-if [[ -f "$STAMP" && "$(cat $STAMP)" == "$VERSION" ]]; then
-  echo "✅ Already installed version $VERSION"
-  exit 0
-fi
+#if [[ -f "$STAMP" && "$(cat $STAMP)" == "$VERSION" ]]; then
+#  echo "✅ Already installed version $VERSION"
+#  exit 0
+#fi
 
 # Download and extract
 curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
