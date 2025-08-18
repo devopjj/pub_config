@@ -38,7 +38,7 @@ git sync -r github -m "urgent sync"
 #### bash 自动安装脚本
 
 ```
-bash <(curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/refs/heads/master/install-bashrc.sh)
+curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/master/install-bashrc.sh | bash
 ```
 #### ops-toolkis
 只讀拉取
