@@ -8,25 +8,43 @@
 # === CONFIG ===
 VERSION="v1"
 DEST="$HOME"
+STAMP="$DEST/.bashrc.d/.installed_version"
 URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-${VERSION}.tgz"
 BASE_URL="https://github.com/devopjj/pub_config/raw/refs/heads/master"
-STAMP="$DEST/.bashrc.d/.installed_version"
 
-echo "👉 Installing bashrc bundle version: $VERSION"
-
-# Check existing version
-#if [[ -f "$STAMP" && "$(cat $STAMP)" == "$VERSION" ]]; then
-#  echo "✅ Already installed version $VERSION"
-#  exit 0
-#fi
-
-# Download and extract
-curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
-  echo "❌ Failed to download bundle"; exit 1;
+# Get latest version from GitHub releases or tags
+get_latest_version() {
+  curl -fsSL "https://api.github.com/repos/devopjj/pub_config/releases/latest" 2>/dev/null | \
+  grep '"tag_name":' | cut -d'"' -f4 || echo "v2"
 }
 
+LATEST_VERSION=$(get_latest_version)
+CURRENT_VERSION=""
+
+# Check current version
+if [[ -f "$STAMP" ]]; then
+  CURRENT_VERSION=$(cat "$STAMP")
+  echo "📋 Current version: $CURRENT_VERSION"
+  
+  if [[ "$CURRENT_VERSION" == "$LATEST_VERSION" ]]; then
+    echo "✅ Already up to date ($CURRENT_VERSION)"
+    exit 0
+  fi
+fi
+
+echo "🚀 Upgrading from $CURRENT_VERSION to $LATEST_VERSION"
+
+# Download and extract
+URL="${BASE_URL}/bashrc_bundle-${LATEST_VERSION}.tgz"
+curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
+  echo "❌ Failed to download $URL"; exit 1;
+}
+
+mkdir -p "$DEST/.bashrc.d"
 tar xzf /tmp/bashrc_bundle.tgz -C "$DEST"
-echo "$VERSION" > "$STAMP"
+echo "$LATEST_VERSION" > "$STAMP"
+rm -f /tmp/bashrc_bundle.tgz
+
 
 # ops-toolkis
 cd $HOME
