@@ -1,9 +1,15 @@
 #!/bin/bash
+#================================================
+# filename: install-bashrc.sh
+# filedesc: Auto upgrade bashrc bundle
+# modified: 2025-08-18, 12:03
+#================================================
 
 # === CONFIG ===
 VERSION="v1"
-URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-${VERSION}.tgz"
 DEST="$HOME"
+URL="https://github.com/devopjj/pub_config/raw/refs/heads/master/bashrc_bundle-${VERSION}.tgz"
+BASE_URL="https://github.com/devopjj/pub_config/raw/refs/heads/master"
 STAMP="$DEST/.bashrc.d/.installed_version"
 
 echo "👉 Installing bashrc bundle version: $VERSION"
