@@ -40,6 +40,22 @@ git sync -r github -m "urgent sync"
 ```
 curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/master/install-bashrc.sh | bash
 ```
+##### 進階用法：
+```
+# 正常升级检查
+./install-bashrc.sh
+
+# 强制全新重装
+./install-bashrc.sh --force
+./install-bashrc.sh -f
+
+# 查看帮助
+./install-bashrc.sh --help
+./install-bashrc.sh -h
+
+# 远程执行强制重装
+curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/master/install-bashrc.sh | bash -s -- --force
+```
 #### ops-toolkis
 只讀拉取
 PAT_READONLY="XXX"

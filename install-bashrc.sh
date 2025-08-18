@@ -63,6 +63,8 @@ if [[ "$FORCE_INSTALL" == true ]]; then
     echo "🧹 Cleaning existing installation..."
     rm -rf "$DEST/.bashrc" "$DEST/.bash_profile" "$DEST/.bashrc.d" 2>/dev/null
   fi
+elif [[ -z "$CURRENT_VERSION" ]]; then
+  echo "📦 First time installation of $LATEST_VERSION"
 else
   echo "🚀 Upgrading from $CURRENT_VERSION to $LATEST_VERSION"
 fi
@@ -95,6 +97,8 @@ fi
 
 if [[ "$FORCE_INSTALL" == true ]]; then
   echo "✅ Force reinstalled $LATEST_VERSION. Run 'exec bash' to apply changes."
+elif [[ -z "$CURRENT_VERSION" ]]; then
+  echo "✅ Installed $LATEST_VERSION. Run 'exec bash' to apply changes."
 else
   echo "✅ Upgraded to $LATEST_VERSION. Run 'exec bash' to apply changes."
 fi
