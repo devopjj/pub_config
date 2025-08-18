@@ -22,5 +22,12 @@ curl -fsSL "$URL" -o /tmp/bashrc_bundle.tgz || {
 tar xzf /tmp/bashrc_bundle.tgz -C "$DEST"
 echo "$VERSION" > "$STAMP"
 
+# ops-toolkis
+cd $HOME
+PAT_READONLY="XXX"
+owner="devopjj"
+repo="ops-toolkit"
+git clone https://devopjj:$PAT_READONLY@github.com/${owner}/${repo}.git
+
 # Reload shell
 echo "✅ Installed. Run 'exec bash' or open a new shell to apply changes."
