@@ -1,29 +1,4 @@
-# env.j
 
-101
-04.12: add CA from PIMA
-
-JJ的工作環境設置。
-
-- 2020.04.08: update from PIMA
-- 2020.04.28: update from PIMA, at MacAirbook
-- 2020.05.09: add init-env.sh
-- 2020.05.20: remove .bash_alias , combine alias/export to **.commonrc** for bash/zsh
-- 2020.10.04: transfer from 10.11.11.2 to 10.11.11.110
-
-### ✅ 推荐结构说明（目标结构）
-
-```
-~/
-├── .bashrc                     # 主入口，加载 .bashrc.d/ 下模块
-├── .bash_profile              # 登录 shell 初始化（调用 .bashrc）
-├── .bashrc.d/                 # 模块目录
-│   ├── 00-env.sh              # 环境变量（含平台判断）
-│   ├── 10-tools.sh            # 工具加载（pyenv, nvm, etc）
-│   ├── 20-alias.sh            # alias 设置
-│   ├── 30-func.sh             # 常用函数（来自 myfunc.sh）
-│   └── 99-local.sh            # 用户自定义扩展
-```
 ### git
 #### 方案1: 手動控制同步目標
 ```
