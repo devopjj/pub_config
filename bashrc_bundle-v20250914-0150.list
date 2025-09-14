@@ -1,0 +1,15 @@
+env.j/.bashrc.d/.bashrc_loader
+env.j/.bashrc.d/.bashrc
+env.j/.bashrc.d/.bash_profile
+env.j/.bashrc.d/.bashrc.d
+env.j/.bashrc.d/.vimrc
+env.j/.bashrc.d/.zshrc
+env.j/.bashrc.d/.cshrc
+env.j/.bashrc.d/.myaliasrc
+env.j/.bashrc.d/.screenrc
+env.j/.bashrc.d/.terraform.rc
+env.j/.bashrc.d/.wgetrc
+env.j/.bashrc.d/.kubeletrc
+env.j/.bashrc.d/.gitconfig
+env.j/.bashrc.d/install-bashrc.sh
+env.j/.bashrc.d/README.md
