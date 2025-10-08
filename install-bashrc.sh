@@ -15,6 +15,10 @@ STAMP="${DEST}/.bashrc.d/.installed_version"
 BASE_URL="https://github.com/devopjj/pub_config/releases/download/"
 API_BASE="https://api.github.com/repos/devopjj/pub_config"
 FORCE_INSTALL=false
+# ✅ R2 镜像配置
+R2_MIRROR_ENABLED="${R2_MIRROR_ENABLED:-true}"
+R2_MIRROR_URL="${R2_MIRROR_URL:-https://cdn.example.com/bashrc}"  # 替换为你的域名
+
 # curl base opts
 CURL_OPTS=(--fail --silent --show-error --location --retry 3 --retry-delay 1 --max-time 60)
 
@@ -32,6 +36,30 @@ USAGE
     *) echo "❌ Unknown option: $1"; exit 1 ;;
   esac
 done
+
+# 智能选择下载源
+select_download_source() {
+    if [[ "$USE_MIRROR" == "github" ]]; then
+        echo "github"
+        return
+    fi
+    
+    if [[ "$USE_MIRROR" == "r2" ]]; then
+        echo "r2"
+        return
+    fi
+    
+    # 自动检测（简化版：直接尝试 R2）
+    if [[ "$R2_MIRROR_ENABLED" == "true" ]]; then
+        # 测试 R2 可访问性
+        if curl -sf --connect-timeout 3 "${R2_MIRROR_URL}/bashrc_bundle-latest.tgz" -o /dev/null 2>/dev/null; then
+            echo "r2"
+            return
+        fi
+    fi
+    
+    echo "github"
+}
 
 # === GitHub API helper (supports GITHUB_TOKEN if provided) ===
 gh_api() {
@@ -87,9 +115,18 @@ trap 'rm -rf "${TMPDIR}"' EXIT
 BUNDLE_TGZ="${TMPDIR}/bashrc_bundle.tgz"
 BUNDLE_LIST="${TMPDIR}/bashrc_bundle.list"
 
-BUNDLE_URL="${BASE_URL}/${LATEST_VERSION}/bashrc_bundle-${LATEST_VERSION}.tgz"
-LIST_URL="${BASE_URL}/${LATEST_VERSION}/bashrc_bundle-${LATEST_VERSION}.list"
+DOWNLOAD_SOURCE=$(select_download_source)
 
+# 构建下载 URL
+if [[ "$DOWNLOAD_SOURCE" == "r2" ]]; then
+    BUNDLE_URL="${R2_MIRROR_URL}/bashrc_bundle-${LATEST_VERSION}.tgz"
+    LIST_URL="${R2_MIRROR_URL}/bashrc_bundle-${LATEST_VERSION}.list"
+    echo "🇨🇳 Using R2 mirror"
+else
+    BUNDLE_URL="${BASE_URL}/bashrc_bundle-${LATEST_VERSION}.tgz"
+    LIST_URL="${BASE_URL}/bashrc_bundle-${LATEST_VERSION}.list"
+    echo "🌍 Using GitHub"
+fi
 echo "📥 Downloading bundle: ${BUNDLE_URL}"
 curl "${CURL_OPTS[@]}" -o "${BUNDLE_TGZ}" "${BUNDLE_URL}" || { echo "❌ Failed to download bundle"; exit 1; }
 
