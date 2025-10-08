@@ -1,0 +1,16 @@
+.bashrc_loader
+.bashrc
+.bash_profile
+.vimrc
+.zshrc
+.cshrc
+.myaliasrc
+.screenrc
+.terraform.rc
+.wgetrc
+.kubeletrc
+.gitconfig
+env.j/bin
+env.j/.bashrc.d
+install-bashrc.sh
+README.md
