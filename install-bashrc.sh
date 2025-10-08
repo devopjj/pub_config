@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< Updated upstream
 #================================================
 # filename: install-bashrc.sh
 # filedesc: Auto upgrade bashrc bundle with force reinstall
@@ -9,6 +10,9 @@ set -euo pipefail
 IFS=$'\n\t'
 umask 077
 
+=======
+# install-bashrc.sh
+>>>>>>> Stashed changes
 # === CONFIG ===
 DEST="${HOME}/env.j"
 STAMP="${DEST}/.bashrc.d/.installed_version"
