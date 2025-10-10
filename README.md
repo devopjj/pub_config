@@ -15,6 +15,11 @@ git sync -r github -m "urgent sync"
 ```
 curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/master/install-bashrc.sh | bash
 ```
+强制安装
+```
+curl -fsSL https://raw.githubusercontent.com/devopjj/pub_config/master/install-bashrc.sh | bash -s -- -f
+```
+
 ##### 進階用法：
 ```
 # 正常升级检查
