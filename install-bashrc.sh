@@ -2,7 +2,7 @@
 #================================================
 # filename: install-bashrc.sh
 # filedesc: Auto upgrade bashrc bundle with force reinstall
-# modified: 2025-10-08 23:42:49
+# modified: 2025-10-16 10:18:49
 # version: 2.3
 #================================================
 
